@@ -297,6 +297,22 @@ a.boxclose{
 	height: 40px;
 }
 
+.footer-container-top{
+	background-color: #fff;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    min-height: 50px;
+    border-top: 1px solid #EE145B;
+}
+
+.footer-container-top .footer-collapse a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    display: block;
+}
+
 
 .search-box input#search{
   width: 300px;
@@ -329,11 +345,12 @@ a.boxclose{
 .follower-count{
 	display: table;
 	margin : 0 auto;
-
 }
 
-.follower-icon{
-	background: url("../images/icon/follower.png");
+.follower-count img{
+	display: inline-block;
+	height: 20px;
+	width: 5px;
 }
 
 .follower-count span{
@@ -360,6 +377,24 @@ a.boxclose{
 .follow-btn a:hover{
 	color: #fff;
 	font-weight: bolder;
+}
+
+footer{
+	background-color: #EE145B;
+}
+
+.nav-footer{
+	display: table;
+	margin : 0 auto;
+}
+
+.nav-footer ul{
+	display: inline-block;
+}
+
+.nav-footer ul li a{
+	text-decoration: none;
+	color: #fff;
 }
 
 
@@ -440,7 +475,7 @@ a.boxclose{
 .post-info-rate-share{
 	border-top: 1px solid rgba(183, 181, 181, 0.36);
 	padding: 4% 0 2%;
-	background-color: #EE145B;
+	background-color: #282828;
 }
 .rateit{
 	float:left;
@@ -854,7 +889,7 @@ span.mail a:hover{
 /*--media Quries for 1440px-monitors-*/
 @media only screen and (max-width:1440px) and (min-width:1366px) {
 	.wrap{
-		width:85%;
+		width:100%;
 	}
 }
 /*--//End-media Quries for 1440px-monitors-*/
