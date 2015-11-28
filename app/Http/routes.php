@@ -20,18 +20,24 @@ Route::post('/login', [
     'uses' => 'Auth\AuthController@postLogin'
 ]);
 
+Route::get('/logout', [
+    'as'   => 'auth.logout',
+    'uses' => 'Auth\AuthController@getLogout'
+]);
+
 Route::get('/daftar', [
     'as'   => 'auth.register',
     'uses' => 'Auth\AuthController@getRegister'
 ]);
 
 Route::post('/daftar', [
+    'as'   => 'auth.processRegister',
     'uses' => 'Auth\AuthController@postRegister'
 ]);
 
 Route::get('/jelajah', [
-    'as'   => 'explore',
-    'uses' => 'GuestController@getExplore'
+    'as'   => 'ukm.index',
+    'uses' => 'UkmController@index'
 ]);
 
 Route::get('/ukm/{id}', [
@@ -39,9 +45,14 @@ Route::get('/ukm/{id}', [
     'uses' => 'UkmController@show'
 ]);
 
+Route::get('/cari/{name}', [
+    'as'   => 'ukm.search',
+    'uses' => 'UkmController@search'
+])->where('name', '[A-Za-z0-9]+');
+
 Route::group([], function() {
     Route::get('/home', [
-        'as'   => 'home',
+        'as'   => 'user.home',
         'uses' => 'UserController@getHome'
     ]);
 
@@ -51,6 +62,7 @@ Route::group([], function() {
     ]);
 
     Route::post('/ukm/buat', [
+        'as'   => 'ukm.store',
         'uses' => 'UkmController@store'
     ]);
 

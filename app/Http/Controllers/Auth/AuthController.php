@@ -62,4 +62,9 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    private function authenticated($request, \App\Model\User $user)
+    {
+        return redirect()->route('user.home');
+    }
 }

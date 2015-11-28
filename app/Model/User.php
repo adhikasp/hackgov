@@ -28,7 +28,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $guard = [];
+    protected $guarded = [];
 
     /**
      * The attributes excluded from the model's JSON form.
