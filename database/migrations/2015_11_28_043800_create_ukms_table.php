@@ -14,9 +14,12 @@ class CreateUkmsTable extends Migration
     {
         Schema::create('ukms', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user-id');
             $table->string('name');
+            $table->string('address');
             $table->string('profile_picture')->nullable();
-            $table->string('description');
+            $table->string('short_description');
+            $table->string('long_description');
             $table->string('follower_number');
             $table->timestamps();
         });
