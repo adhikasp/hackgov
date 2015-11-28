@@ -70,7 +70,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 
-		
+					 									 <div id="map"></div>
+
 
 		<!---//End-header---->
 		<!---start-content---->
@@ -83,7 +84,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 				<div class="wrap">
 				 <div id="main" role="main">
-			 									 <div id="map"></div>
 
 			 		<h1 align="center">Jelajah UKM</h1>
 			 		<h2 align="center">UKM (Usaha Kecil Menengah) merupakan salah satu penyokong perekonomian Indonesia</h2>
@@ -293,47 +293,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!----wookmark-scripts---->
 		  <script src="js/jquery.imagesloaded.js"></script>
 		  <script src="js/jquery.wookmark.js"></script>
+		    <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
+
 		  				<script src="js/gmaps.js"></script>
 		  						  				<script src="js/maplace-0.1.3.js"></script>
 
 
 		  <script type="text/javascript">
-		   var LocsA = [
-    {
-        lat: 45.9,
-        lon: 10.9,
-        title: 'Title A1',
-        html: '<h3>Content A1</h3>',
-        icon: 'http://maps.google.com/mapfiles/markerA.png',
-        animation: google.maps.Animation.DROP
-    },
-    {
-        lat: 44.8,
-        lon: 1.7,
-        title: 'Title B1',
-        html: '<h3>Content B1</h3>',
-        icon: 'http://maps.google.com/mapfiles/markerB.png',
-        show_infowindow: false
-    },
-    {
-        lat: 51.5,
-        lon: -1.1,
-        title: 'Title C1',
-        html: [
-            '<h3>Content C1</h3>',
-            '<p>Lorem Ipsum..</p>'
-        ].join(''),
-        zoom: 8,
-        icon: 'http://maps.google.com/mapfiles/markerC.png'
-    }
-];
-	new Maplace({
-    locations: LocsA,
-    map_div: '#map',
-    controls_type: 'list',
-    controls_on_map: false
-}).Load(); 
-
+		   
+var map;
+    $(document).ready(function(){
+      map = new GMaps({
+        div: '#map',
+        lat: -12.043333,
+        lng: -77.028333
+      });
+    });
 		   </script>
 		   <script type="text/javascript">
 
