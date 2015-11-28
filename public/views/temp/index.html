@@ -55,8 +55,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<nav class="pull-right">
 									<ul>
 										<li><a href="#"><span>Beranda</span></a></li>
-										<li><a href="#"><span>Jelajah UKM</span></a></li>
-										<li><a href="#"><span>Belanja</span></a></li>
+										<li><a href="jelajah.html"><span>Jelajah UKM</span></a></li>
+										<li><a href="belanja/index.ht"><span>Belanja</span></a></li>
 										<li><a href="login.html"><span>Masuk</span></a></li>
 										
 					
@@ -126,16 +126,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				        		<span><a href="#"><label> </label>Semarang</a></span>
 				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
 			        		</div>
-			        		
-			        		<div class="post-info-rate-share">
-			        			<div class="follower-count">
-			        				<span class="follower-icon"></span>
-			        				<span>6.783</span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-			        	<div class="btn-tiles">
+			        		<div class="btn-tiles">
 				        			<div class="follow-btn">
 				        				<a class="btn icon-btn btn-pink" href="#">Ikuti</a>
 				        			</div>
@@ -144,6 +135,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				        			</div>
 
 			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="follower-count">
+			        				<span class="follower-icon"></span>
+			        				<span>6.783</span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
 					</li>
 			        <li onclick="location.href='single-page.html';">
 <div class="img-container">
@@ -352,6 +351,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		        }
 		      };
 
+		    $(window).scroll(function() {
+    var height = $(window).scrollTop();
+
+    if(height  > 200) {
+        $('.header').css('background-color','#ff8f0a');
+    } else{
+    	        $('.header').css('background-color','transparent');
+
+    }
+});
 		       $('#tiles').find("li").hover(function(){
         $('.btn-tiles').css("display","table");
                 $('.btn-tiles').css("position","relative");

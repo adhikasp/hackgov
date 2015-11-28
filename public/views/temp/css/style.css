@@ -33,10 +33,16 @@ body{
 	width:80%;
 	margin:0 auto;
 }
+
+.news ul {
+    margin-top: 14px;
+    padding-left: 0;
+    text-align: center;
+}
+
 /*---start-header----*/
 .header{
-	background-color: #EE145B ;
-	border-bottom: 1px solid rgba(214, 213, 212, 0.64);
+	background-color: transparent; ;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -126,7 +132,8 @@ nav ul li a span{
 }
 
 nav ul li a:hover{
-	border-top: solid 2px;
+	border-top: solid 5px;
+	padding-top: 10px;
 	color: #fff;
 	text-decoration: none;
 }
@@ -255,8 +262,10 @@ a.boxclose{
 
 
 .main-container{
-	background: url(../images/tari.jpg);
+	background: url(../images/dance.jpg);
+	background-position: 10%;
 	background-size:cover;
+
 	width:100%;
 	height: 650px;
 
@@ -264,7 +273,7 @@ a.boxclose{
 
 
 .tagline{
-	padding-top: 200px;
+	padding-top: 120px;
 }
 
 .tagline h2{
@@ -292,9 +301,10 @@ a.boxclose{
 }
 
 .btn-submit{
-	background-color: #EE145B;
+	background-color: #ff8f0a;
 	color: #fff;
-	height: 40px;
+	height: 50px;
+	width: 120px;
 }
 
 .footer-container-top{
@@ -303,7 +313,7 @@ a.boxclose{
     padding-top: 150px;
     padding-bottom: 50px;
     min-height: 50px;
-    border-top: 1px solid #EE145B;
+    border-top: 1px solid #ff8f0a;
 }
 
 .footer-container-top .footer-collapse a {
@@ -315,10 +325,13 @@ a.boxclose{
 
 
 .search-box input#search{
-  width: 300px;
+  width: 500px;
   height: 40px;
   background: #fff;
-  border: 5px #EE145B ;
+  
+    padding: 25px;
+    border: 5px solid #ff8f0a;
+    opacity: .9;
   font-size: 10pt;
   color: #63717f;
   border-radius: 5px;
@@ -380,7 +393,7 @@ a.boxclose{
 }
 
 footer{
-	background-color: #EE145B;
+	background-color: #ff8f0a;
 }
 
 .nav-footer{
@@ -402,7 +415,7 @@ footer{
 
 .btn-pink{
 	color: #fff;
-    background-color: #EE145B ;
+    background-color: #ff8f0a ;
     border-color: #B5003A ;
     	width:100px;
 
