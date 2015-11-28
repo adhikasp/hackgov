@@ -251,6 +251,7 @@ a.boxclose{
     display: block;
     width: 100%;
     height: 400px;
+    margin-top: 40px;
 }
 
 #map {
@@ -350,8 +351,7 @@ a.boxclose{
 }
 
 #tiles li:hover{
-	background-color: #000;
-	opacity: 1;
+	
 }
 
 .follower-count{

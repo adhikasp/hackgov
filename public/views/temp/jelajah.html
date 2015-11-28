@@ -68,10 +68,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 
 
-
+				<div class="row">
+				<div class="col-md-12">
 
 					 									 <div id="map"></div>
-
+					 									 </div>
+</div>
 
 		<!---//End-header---->
 		<!---start-content---->
@@ -90,7 +92,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			      
 			      <ul id="tiles">
 			        <!-- These are our grid blocks -->
-			        <li onclick="location.href='single-page.html';">
+			        <li id="list-ukm-1" onclick="location.href='single-page.html';">
 			        	<div class="img-container">
 			        		<img src="images/ukm1.jpg">
 			        	</div>
@@ -106,7 +108,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        		</div>
 			        	</div>
 			        </li>
-			        <li onclick="location.href='single-page.html';">
+			        <li id="list-ukm-12" onclick="location.href='single-page.html';">
 <div class="img-container">
 			        		<img src="images/ukm2.jpg">
 			        	</div>				
@@ -131,7 +133,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        		</div>
 			        	</div>
 					</li>
-			        <li onclick="location.href='single-page.html';">
+			        <li id="list-ukm-2" onclick="location.href='single-page.html';">
 <div class="img-container">
 			        		<img src="images/img3.jpg">
 			        	</div>			        	<div class="post-info">
@@ -146,7 +148,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        		</div>
 			        	</div>
 			        </li>
-			        <li onclick="location.href='single-page.html';">
+			        <li id="list-ukm-3" onclick="location.href='single-page.html';">
 			        	<img src="images/ukm4.jpg">
 			        	<div class="post-info">
 			        		<div class="post-basic-info">
@@ -161,7 +163,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        	</div>
 			        </li>
 			        <!--//-->
-			        <li onclick="location.href='single-page.html';">
+			        <li id="list-ukm-4" onclick="location.href='single-page.html';">
 <div class="img-container">
 			        		<img src="images/ukm4.jpg">
 			        	</div>			        	<div class="post-info">
@@ -176,7 +178,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        		</div>
 			        	</div>
 			        </li>
-			        <li onclick="location.href='single-page.html';">
+			        <li id="list-ukm-5" onclick="location.href='single-page.html';">
 <div class="img-container">
 			        		<img src="images/ukm1.jpg">
 			        	</div>			        	<div class="post-info">
@@ -191,7 +193,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        		</div>
 			        	</div>
 			        </li>
-			        <li onclick="location.href='single-page.html';">
+			        <li id="list-ukm-6" onclick="location.href='single-page.html';">
 <div class="img-container">
 			        		<img src="images/ukm1.jpg">
 			        	</div>						<div class="post-info">
@@ -206,7 +208,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        		</div>
 			        	</div>
 					</li>
-					  <li onclick="location.href='single-page.html';">
+					  <li id="list-ukm-7" onclick="location.href='single-page.html';">
 <div class="img-container">
 			        		<img src="images/ukm1.jpg">
 			        	</div>			        	<div class="post-info">
@@ -222,7 +224,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        	</div>
 			        </li>
 			        <!--//-->
-			         <li onclick="location.href='single-page.html';">
+			         <li id="list-ukm-8" onclick="location.href='single-page.html';">
 <div class="img-container">
 			        		<img src="images/ukm1.jpg">
 			        	</div>			        	<div class="post-info">
@@ -237,7 +239,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        		</div>
 			        	</div>
 			        </li>
-			        <li onclick="location.href='single-page.html';">
+			        <li id="list-ukm-9" onclick="location.href='single-page.html';">
 <div class="img-container">
 			        		<img src="images/ukm2.jpg">
 			        	</div>						<div class="post-info">
@@ -252,7 +254,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        		</div>
 			        	</div>
 					</li>
-			        <li onclick="location.href='single-page.html';">
+			        <li id="list-ukm-10" onclick="location.href='single-page.html';">
 <div class="img-container">
 			        		<img src="images/img3.jpg">
 			        	</div>			        	<div class="post-info">
@@ -267,7 +269,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			        		</div>
 			        	</div>
 			        </li>
-			        <li onclick="location.href='single-page.html';">
+			        <li id="list-ukm-11" onclick="location.href='single-page.html';">
 <div class="img-container">
 			        		<img src="images/ukm4.jpg">
 			        	</div>			        	<div class="post-info">
@@ -303,10 +305,119 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		   
 var map;
     $(document).ready(function(){
-      map = new GMaps({
+     map = new GMaps({
         div: '#map',
-        lat: -12.043333,
-        lng: -77.028333
+        lat: -7.800330, 
+        lng: 110.365970,
+        zoom : 6
+      });
+      map.addMarker({
+        lat: -3.543333,
+        lng: 104.365970,
+        title: 'Lima',
+       
+        infoWindow: {
+          content: '<img src="images/ukm2.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukamiskin</a></p>'
+        }
+       
+      });
+      map.addMarker({
+        lat: 0.34003,
+        lng: 117.128333,
+        title: 'Samarinda',
+        infoWindow: {
+          content: '<img src="images/ukm1.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukamakmur</a></p>'
+        }
+      });
+      map.addMarker({
+        lat: -5.343333,
+        lng: 119.405970,
+        title: 'Makassar',
+       
+        infoWindow: {
+          content: '<img src="images/ukm2.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukamiskin</a></p>'
+        }
+       
+      });
+       map.addMarker({
+        lat: -8.54003,
+        lng: 115.128333,
+        title: 'Bali',
+        infoWindow: {
+          content: '<img src="images/ukm1.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukamakmur</a></p>'
+        }
+      });
+        map.addMarker({
+        lat: -2.493333,
+        lng: 140.715970,
+        title: 'Jayapura',
+       
+        infoWindow: {
+          content: '<img src="images/ukm2.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukamiskin</a></p>'
+        }
+       
+      });
+       map.addMarker({
+        lat: -8.34003,
+        lng: 116.328333,
+        title: 'Bali',
+        infoWindow: {
+          content: '<img src="images/ukm1.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukamakmur</a></p>'
+        }
+      });
+      map.addMarker({
+        lat: -3.43333,
+        lng: 130.45970,
+        title: 'Maluku',
+       
+        infoWindow: {
+          content: '<img src="images/ukm2.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukamiskin</a></p>'
+        }
+       
+      });
+      map.addMarker({
+        lat: -7.8003,
+        lng: 110.128333,
+        title: 'Marker with InfoWindow',
+        infoWindow: {
+          content: '<img src="images/ukm1.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukamakmur</a></p>'
+        }
+      });
+      map.addMarker({
+        lat: -7.043333,
+        lng: 108.365970,
+        title: 'Lima',
+       
+        infoWindow: {
+          content: '<img src="images/ukm2.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukamiskin</a></p>'
+        }
+       
+      });
+      map.addMarker({
+        lat: -7.042,
+        lng: 107.128333,
+        title: 'Marker with InfoWindow',
+        infoWindow: {
+          content: '<img src="images/ukm1.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukamakmur</a></p>'
+        }
+      });
+      map.addMarker({
+        lat: -7.13333,
+        lng: 108.465970,
+        title: 'Lima',
+       
+        infoWindow: {
+          content: '<img src="images/ukm3.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukamaju</a></p>'
+        }
+       
+      });
+      map.addMarker({
+        lat: -7.042,
+        lng: 107.028333,
+        title: 'Marker with InfoWindow',
+        infoWindow: {
+          content: '<img src="images/ukm4.jpg" height="150" width="300"/><br><p align="center"><a href="single-page.html" style="text-decoration: none;">UKM Desa Sukasuka</a></p>'
+        }
       });
     });
 		   </script>
@@ -360,15 +471,23 @@ var map;
 		        }
 		      };
 
-		       $('#tiles').find("li").hover(function(){
-        $('.btn-tiles').css("display","table");
-                $('.btn-tiles').css("position","relative");
-                        $('.btn-tiles').css("top","10%");
-
-
-    },function(){
+		      for (i = 1; i < 13; i++) { 
+    			$('#list-ukm-[i]').hover(function(){
+    				$(this).css('background-color','#000');
+        			$('.btn-tiles').css("display","table");
+                	$('.btn-tiles').css("position","relative");
+                    $('.btn-tiles').css("top","10%");
+                     },function(){
 $('.btn-tiles').css("display","none");
-    })
+    });
+               
+
+			}
+
+		      
+
+
+   
 		
 		      // Call the layout function for the first time
 		      applyLayout();
