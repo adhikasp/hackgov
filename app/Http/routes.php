@@ -45,6 +45,11 @@ Route::get('/ukm/{id}', [
     'uses' => 'UkmController@show'
 ]);
 
+Route::get('/belanja', [
+    'as'   => 'store',
+    'uses' => 'GuestController@store'
+]);
+
 Route::get('/cari', function() {
     return redirect()->route('ukm.search', ['ukm']);
 });
