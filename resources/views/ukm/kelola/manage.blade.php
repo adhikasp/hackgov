@@ -9,6 +9,13 @@
 
     <hr>
     <h2>Daftar Artikel</h2>
+    @unless ($articles == null)
+        <ul>
+            @foreach ($articles as $article)
+                <li><a href="">{{ $article->title }}</a></li>
+            @endforeach
+        </ul>
+    @endunless
     <a href="">Buat artikel baru</a>
 
     <hr>

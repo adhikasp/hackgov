@@ -75,6 +75,10 @@ class UkmController extends Controller
     {
         $user = \Auth::user();
         $ukm  = \App\Model\Ukm\Ukm::find($id);
+        $articles = $ukm->articles;
+        if ($articles->isEmpty()) {
+            $articles = null;
+        }
         if ($ukm == null) {
             return 'UKM tersebut tidak ada';
         }
@@ -83,7 +87,8 @@ class UkmController extends Controller
         }
         return view('ukm.kelola.manage')
             ->withUser($user)
-            ->withUkm($ukm);
+            ->withUkm($ukm)
+            ->withArticles($articles);
     }
 
     /**

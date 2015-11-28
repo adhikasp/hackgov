@@ -12,4 +12,9 @@ class Article extends Model
     {
         return $this->belongsTo('App\Model\User');
     }
+
+    public function publisher()
+    {
+        return $this->belongsTo('App\Model\Ukm\Ukm');
+    }
 }
