@@ -71,6 +71,21 @@ class UkmController extends Controller
         return 'ukm dengan id : ' . $id;
     }
 
+    public function manage($id)
+    {
+        $user = \Auth::user();
+        $ukm  = \App\Model\Ukm\Ukm::find($id);
+        if ($ukm == null) {
+            return 'UKM tersebut tidak ada';
+        }
+        if ($ukm->founder->id != $user->id) {
+            return 'Anda tidak berhak mengelola UKM ini.';
+        }
+        return view('ukm.kelola.manage')
+            ->withUser($user)
+            ->withUkm($ukm);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -79,7 +94,9 @@ class UkmController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ukm = \App\Model\Ukm\Ukm::find($id);
+        return view('ukm.kelola.edit')
+            ->withUkm($ukm);
     }
 
     /**
@@ -91,7 +108,12 @@ class UkmController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ukm = \App\Model\Ukm\Ukm::find($id);
+        $ukm->name             = $request->name;
+        $ukm->profile_picture  = $request->profile_picture;
+        $ukm->long_description = $request->long_description;
+        $ukm->save();
+        return redirect()->route('ukm.manage', [$id]);
     }
 
     /**

@@ -17,6 +17,6 @@ class Ukm extends Model
 
     public function founder()
     {
-        return $this->belongsTo('App\Model\User');
+        return $this->belongsTo('App\Model\User', 'user_id');
     }
 }

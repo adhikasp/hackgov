@@ -12,7 +12,7 @@ class UserController extends Controller
     public function getHome()
     {
         $user = \Auth::user();
-        $ukms = $user->ukms();
+        $ukms = $user->ukms()->get();
         return view('user.home')
             ->withUser(\Auth::user())
             ->withUkms($ukms);
