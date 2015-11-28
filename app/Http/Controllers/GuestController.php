@@ -11,6 +11,8 @@ class GuestController extends Controller
 {
     public function getHome()
     {
-        return view('welcome');
+        $ukms = \App\Model\Ukm\Ukm::all();
+        return view('landing')
+            ->withUkms($ukms);
     }
 }
