@@ -11,6 +11,7 @@
 |
 */
 
+
 $factory->define(App\Model\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
@@ -21,15 +22,18 @@ $factory->define(App\Model\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Model\Ukm\Ukm::class, function (Faker\Generator $faker) {
+    $category = ['Kerajinan', 'Pakaian', 'Aksesoris', 'Lain-lain', 'Kuliner'];
     $ukmName = $faker->company;
     return [
         'name' => $ukmName,
+        'category' => $faker->randomElement($category),
         'profile_picture' => 'http://lorempixel.com/200/200',
         'founder_id' => $faker->numberBetween(1, 20),
         'address' => $faker->address,
         'short_description' => $ukmName . ' - ' . $faker->bs,
         'long_description'  => $faker->text,
         'follower_number' => $faker->numberBetween(10, 10000),
+
 
         // Kiri atas   -7.660916, 110.225604
         // Kanan bawah -8.026834, 110.574648
@@ -38,13 +42,20 @@ $factory->define(App\Model\Ukm\Ukm::class, function (Faker\Generator $faker) {
     ];
 });
 
-
-
 $factory->define(App\Model\Ukm\Article::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->bs,
         'body' => $faker->paragraph(5),
         'user_id' => $faker->numberBetween(1, 20),
         'ukm_id'  => $faker->numberBetween(1, 40)
+    ];
+});
+
+$factory->define(App\Model\Ukm\Product::class, function (Faker\Generator $faker) {
+    return [
+        'name'   => $faker->sentence(3),
+        'price'  => $faker->numberBetween(2, 100) * 1000,
+        'ukm_id' => $faker->numberBetween(1,20),
+        'photo' => 'http://lorempixel.com/200/200',
     ];
 });

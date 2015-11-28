@@ -24,4 +24,9 @@ class Ukm extends Model
     {
         return $this->hasMany('App\Model\Ukm\Article');
     }
+
+    public function products()
+    {
+        return $this->hasMany('App\Model\Ukm\Product');
+    }
 }
