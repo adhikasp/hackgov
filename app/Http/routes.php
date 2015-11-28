@@ -45,6 +45,10 @@ Route::get('/ukm/{id}', [
     'uses' => 'UkmController@show'
 ]);
 
+Route::get('/cari', function() {
+    return redirect()->route('ukm.search', ['ukm']);
+});
+
 Route::get('/cari/{name}', [
     'as'   => 'ukm.search',
     'uses' => 'UkmController@search'
@@ -66,8 +70,28 @@ Route::group([], function() {
         'uses' => 'UkmController@store'
     ]);
 
-    Route::get('/ukm/{id}/kelola', [
-        'as'   => 'ukm.manage',
-        'uses' => 'UkmController@manage'
-    ]);
+    Route::group([], function() {
+
+        Route::get('/ukm/{id}/kelola', [
+            'as'   => 'ukm.manage',
+            'uses' => 'UkmController@manage'
+        ]);
+
+        Route::get('/ukm/{id}/kelola/edit', [
+            'as'   => 'ukm.edit',
+            'uses' => 'UkmController@edit'
+        ]);
+
+        Route::post('/ukm/{id}/kelola/edit', [
+            'as'   => 'ukm.update',
+            'uses' => 'UkmController@update'
+        ]);
+
+        Route::get('/ukm/{id}/kelola/artikel/baru', [
+            'as'   => 'article.create',
+            'uses' => 'ArticleController@create'
+        ]);
+
+    });
+
 });

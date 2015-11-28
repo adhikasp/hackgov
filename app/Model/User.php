@@ -39,6 +39,6 @@ class User extends Model implements AuthenticatableContract,
 
     public function ukms()
     {
-        return $this->hasMany('App\Model\Ukm\Ukm');
+        return $this->hasMany('App\Model\Ukm\Ukm', 'founder_id');
     }
 }

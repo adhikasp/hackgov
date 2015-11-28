@@ -17,6 +17,11 @@ class Ukm extends Model
 
     public function founder()
     {
-        return $this->belongsTo('App\Model\User');
+        return $this->belongsTo('App\Model\User', 'founder_id');
+    }
+
+    public function articles()
+    {
+        return $this->hasMany('App\Model\Ukm\Article');
     }
 }
