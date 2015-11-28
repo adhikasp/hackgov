@@ -41,7 +41,7 @@ body{
 }
 
 /*---start-header----*/
-.header{
+.header-top{
 	background-color: transparent; ;
 	position: fixed;
 	width: 100%;
@@ -113,27 +113,25 @@ body{
 
 
 
-nav ul li{
+nav ul li {
 	text-decoration: none;
 	display: inline-block;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 nav ul li a{
-		color: #fff;
-		padding-right: 20px;
-
-
+	color: #fff;
+	padding-right: 20px;
+	padding-left: 20px;
 }
 
-nav ul li a span{
-				text-align: center;
-
+nav ul li > a {
+	text-align: center;
 }
 
 nav ul li a:hover{
 	border-top: solid 5px;
-	padding-top: 10px;
+	padding-top: 6px;
 	color: #fff;
 	text-decoration: none;
 }
@@ -229,7 +227,7 @@ a.boxclose{
 	-moz-border-radius:30em;
 	-o-border-radius:30em;
 	vertical-align:middle;
-	
+
 }
 
 #main h1{
@@ -310,8 +308,9 @@ a.boxclose{
 .footer-container-top{
 	background-color: #fff;
     width: 100%;
-    padding-top: 150px;
-    padding-bottom: 50px;
+    margin-top: 40px;
+    padding-top: 50px;
+    padding-bottom: 20px;
     min-height: 50px;
     border-top: 1px solid #ff8f0a;
 }
@@ -328,7 +327,7 @@ a.boxclose{
   width: 500px;
   height: 40px;
   background: #fff;
-  
+
     padding: 25px;
     border: 5px solid #ff8f0a;
     opacity: .9;
@@ -438,11 +437,11 @@ footer{
 .rateit span{
 	height:18px;
 	width:76px;
-	background:url(../images/start-rate.png) no-repeat 0px 0px; 
+	background:url(../images/start-rate.png) no-repeat 0px 0px;
 	display:inline-block;
 }
 .rateit span:hover{
-	background:url(../images/start-rateh.png) no-repeat 0px 0px; 
+	background:url(../images/start-rateh.png) no-repeat 0px 0px;
 }
 .post-basic-info{
 	padding: 7% 7% 5% 7%;
@@ -1001,7 +1000,7 @@ span.mail a:hover{
 		padding: 0.5em 0 0;
 	}
 	.artical-content p:nth-child(1){
-		display:none;	
+		display:none;
 	}
 	.userinfo {
 		width: 17%;
@@ -1092,7 +1091,7 @@ span.mail a:hover{
 		padding: 0.5em 0 0;
 	}
 	.artical-content p:nth-child(1){
-		display:none;	
+		display:none;
 	}
 	.userinfo {
 		display:none;
@@ -1138,7 +1137,7 @@ span.mail a:hover{
 	.menu_box_list li a {
 		margin: 0.44em 1.5em;
 	}
-	.header {
+	.header-top {
 		padding: 1em 0 0.6em;
 	}
 	.menu_box_list ul li {
@@ -1216,7 +1215,7 @@ span.mail a:hover{
 		display:block;
 	}
 	.artical-content p:nth-child(1){
-		display:none;	
+		display:none;
 	}
 	.userinfo {
 		display:none;
@@ -1262,7 +1261,7 @@ span.mail a:hover{
 	.menu_box_list li a {
 		margin: 0.44em 1.5em;
 	}
-	.header {
+	.header-top {
 		padding: 1em 0 0.6em;
 	}
 	.menu_box_list ul li {
@@ -1349,7 +1348,7 @@ span.mail a:hover{
 		display:block;
 	}
 	.artical-content p:nth-child(1){
-		display:none;	
+		display:none;
 	}
 	.userinfo {
 		display:none;
@@ -1396,7 +1395,7 @@ span.mail a:hover{
 	.menu_box_list li a {
 		margin: 0.44em 1.5em;
 	}
-	.header {
+	.header-top {
 		padding: 1em 0 0.6em;
 	}
 	.menu_box_list ul li {
@@ -1424,3 +1423,14 @@ span.mail a:hover{
 	}
 }
 /*--//End-media Quries for 320px-monitors-*/
+
+
+.ukm-card .extra.content {
+	background-color: #ff8f0a !important;
+	color: white !important;
+	font-weight: bold !important;
+}
+
+.search-box input#search {
+	box-sizing: border-box;
+}
