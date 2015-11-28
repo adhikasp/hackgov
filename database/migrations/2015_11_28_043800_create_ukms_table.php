@@ -22,6 +22,10 @@ class CreateUkmsTable extends Migration
             $table->string('short_description');
             $table->string('long_description');
             $table->string('follower_number');
+
+            $table->float('lat');
+            $table->float('lng');
+
             $table->timestamps();
         });
     }

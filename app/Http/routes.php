@@ -88,8 +88,13 @@ Route::group([], function() {
         ]);
 
         Route::get('/ukm/{id}/kelola/artikel/baru', [
-            'as'   => 'article.create',
+            'as'   => 'ukm.article.create',
             'uses' => 'ArticleController@create'
+        ]);
+
+        Route::post('/ukm/{id}/kelola/artikel/baru', [
+            'as'   => 'ukm.article.store',
+            'uses' => 'ArticleController@store'
         ]);
 
     });

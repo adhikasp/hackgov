@@ -30,8 +30,15 @@ $factory->define(App\Model\Ukm\Ukm::class, function (Faker\Generator $faker) {
         'short_description' => $ukmName . ' - ' . $faker->bs,
         'long_description'  => $faker->text,
         'follower_number' => $faker->numberBetween(10, 10000),
+
+        // Kiri atas   -7.660916, 110.225604
+        // Kanan bawah -8.026834, 110.574648
+        'lat' => $faker->randomFloat(6, -7.660916, -8.026834),
+        'lng' => $faker->randomFloat(6, 110.225604, 110.574648),
     ];
 });
+
+
 
 $factory->define(App\Model\Ukm\Article::class, function (Faker\Generator $faker) {
     return [

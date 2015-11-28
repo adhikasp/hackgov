@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Model\Ukm\Ukm;
+use App\Model\Ukm\Article;
+
 class ArticleController extends Controller
 {
     /**
@@ -24,10 +27,11 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         return view('ukm.article.create')
-            ->withUser(\Auth::user());
+            ->withUser(\Auth::user())
+            ->withUkm(Ukm::find($id));
     }
 
     /**
@@ -36,9 +40,16 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $article = Article::create([
+            'title' => $request->title,
+            'body' => $request->body,
+            'ukm_id' => $id,
+            'user_id' => \Auth::user()->id,
+        ]);
+
+        return redirect()->route('ukm.manage', [$id]);
     }
 
     /**

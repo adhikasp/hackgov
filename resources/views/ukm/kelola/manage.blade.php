@@ -16,7 +16,7 @@
             @endforeach
         </ul>
     @endunless
-    <a href="">Buat artikel baru</a>
+    <a href="{{ route('ukm.article.create', [$ukm->id]) }}">Buat artikel baru</a>
 
     <hr>
     <h2>Produk</h2>
