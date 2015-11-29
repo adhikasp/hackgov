@@ -62,9 +62,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <nav class="pull-right">
                   <ul>
                     <li><a href="/"><span>Beranda</span></a></li>
-                    <li><a href="jelajah.html"><span>Jelajah UKM</span></a></li>
-                    <li><a href="belanja"><span>Belanja</span></a></li>
-                    <li><a href="login.html"><span>Masuk</span></a></li>
+                    <li><a href="/jelajah"><span>Jelajah UKM</span></a></li>
+                    <li><a href="/belanja"><span>Belanja</span></a></li>
+                    <li><a href="/login"><span>Masuk</span></a></li>
 
 
                   </ul>
@@ -83,8 +83,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <div class="wrap">
        <div id="main" role="main">
 
-          <h1 align="center">Jelajah UKM</h1>
-          <h2 align="center">UKM (Usaha Kecil Menengah) merupakan salah satu penyokong perekonomian Indonesia</h2>
+          <h1 align="center">Daftar Produk Seluruh UKM</h1>
 
           <div class="ui special cards ukm-card">
 
@@ -99,28 +98,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                       <h5>{{ $product->name }}</h5>
                       <div class="ui inverted button">Wishlist</div>
                       <div class="ui success button">Beli</div>
-
-
-
-
-
-
-
-                      <div class="ui success button cart-wrap">
-                        <div class="cart-dropdown">
-                          <div class="cart-dropdown--header"></div>
-                          <div class="cart-dropdown--body"></div>
-                          <div class="cart-dropdown--footer">
-                            <div class="cart-total"></div>
-                          </div>
-                        </div>
-                        </div>
-
-
-
-
-
-
                     </div>
                   </div>
                 </div>

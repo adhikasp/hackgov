@@ -57,9 +57,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<nav class="pull-right">
 									<ul>
 										<li><a href="#"><span>Beranda</span></a></li>
-										<li><a href="jelajah.html"><span>Jelajah UKM</span></a></li>
-										<li><a href="belanja"><span>Belanja</span></a></li>
-										<li><a href="login.html"><span>Masuk</span></a></li>
+										<li><a href="/jelajah"><span>Jelajah UKM</span></a></li>
+										<li><a href="/belanja"><span>Belanja</span></a></li>
+										<li><a href="/login"><span>Masuk</span></a></li>
 
 
 									</ul>
@@ -107,8 +107,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="ui dimmer">
                   <div class="content">
                     <div class="center">
-                      <div class="ui inverted button">Ikuti</div>
-                      <div class="ui inverted button">Belanja</div>
+                      <a href="/login"><div class="ui success button">Ikuti</div></a>
+                      <a href="/belanja"><div class="ui inverted button">Belanja</div></a>
                     </div>
                   </div>
                 </div>

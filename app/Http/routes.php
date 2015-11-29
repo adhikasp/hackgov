@@ -15,6 +15,10 @@ Route::get('/', [
     'uses' => 'GuestController@getHome'
 ]);
 
+Route::get('/login', function() {
+    return redirect('/views/temp/dasbor');
+});
+
 Route::post('/login', [
     'as'   => 'auth.processLogin',
     'uses' => 'Auth\AuthController@postLogin'
@@ -49,6 +53,10 @@ Route::get('/belanja', [
     'as'   => 'store',
     'uses' => 'GuestController@store'
 ]);
+
+Route::get('/jelajah', function() {
+    return redirect('/views/temp/jelajah.html');
+});
 
 Route::get('/cari', function() {
     return redirect()->route('ukm.search', ['ukm']);

@@ -1,27 +1,3 @@
-{{-- <html>
-  <body>
-    <form action="{{ route('auth.processRegister') }}" method="POST">
-      <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        Nama:<br>
-        <input type="text" name="name">
-        Email:<br>
-        <input type="text" name="email">
-        <br>
-        Password:<br>
-        <input type="password" name="password">
-        <br>
-        <input type="submit" value="Masuk">
-    </form>
-  </body>
-</html> --}}
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html >
   <head>
@@ -59,7 +35,7 @@
           <span class="logmod__heading-subtitle">Masukkan data pribadimu <strong>untuk membuat akun</strong></span>
         </div>
         <div class="logmod__form">
-          <form accept-charset="utf-8" action="#" class="simform">
+          <form accept-charset="utf-8" action="/dasbor" class="simform">
           <div class="sminputs">
               <div class="input full">
                 <label class="string optional" for="name">Nama lengkap*</label>
@@ -115,7 +91,7 @@
           <span class="logmod__heading-subtitle">Masukkan Email dan password <strong>untuk masuk</strong></span>
         </div>
         <div class="logmod__form">
-          <form accept-charset="utf-8" action="#" class="simform">
+          <form accept-charset="utf-8" action="/dasbor" class="simform">
             <div class="sminputs">
               <div class="input full">
                 <label class="string optional" for="email">Email*</label>
@@ -126,11 +102,12 @@
               <div class="input full">
                 <label class="string optional" for="user-pw">Password *</label>
                 <input name="password" class="string optional" maxlength="255" id="user-pw" placeholder="Password" type="password" size="50" />
-                            <span class="hide-password">Lihat</span>
+                						<span class="hide-password">Lihat</span>
               </div>
             </div>
             <div class="simform__actions">
-              <input class="submit" name="commit" type="submit" value="Masuk" />
+              {{-- <input class="submit" name="commit" type="submit" value="Masuk" /> --}}
+              <a href="/dasbor" class="button">Masuk</a>
               <span class="simform__actions-sidetext"><a class="special" role="link" href="#">Lupa password?<br>Klik di sini</a></span>
             </div>
           </form>

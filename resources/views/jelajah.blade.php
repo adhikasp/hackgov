@@ -32,16 +32,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--start-dropdown-->
          <script type="text/javascript">
 			var $ = jQuery.noConflict();
-
+					
 				$(document).ready(function(){
 				//Hide (Collapse) the toggle containers on load
-				$(".toggle_container").hide();
+				$(".toggle_container").hide(); 
 				//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
 				$(".trigger").click(function(){
 					$(this).toggleClass("active").next().slideToggle("slow");
 						return false; //Prevent the browser jump to the link anchor
 				});
-
+									
 			});
 		</script>
         <!--//End-dropdown->
@@ -55,20 +55,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="logo">
 					<a href="index.html"><img src="images/puwan.png" title="puwan" /></a>
 				</div>
-
+				
 				<nav class="pull-right">
 									<ul>
-										<li><a href="/"><span>Beranda</span></a></li>
+										<li><a href="#"><span>Beranda</span></a></li>
 										<li><a href="#"><span>Jelajah UKM</span></a></li>
-										<li><a href="/belanja"><span>Belanja</span></a></li>
-										<li><a href="/login"><span>Masuk</span></a></li>
-
-
+										<li><a href="#"><span>Belanja</span></a></li>
+										<li><a href="#"><span>Masuk</span></a></li>
+										
+					
 									</ul>
 									</nav>
-
-
-
+								
+				
+				
 			</div>
 		</div>
 
@@ -515,7 +515,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 </div>
 			    </div>
-
+			    
 			</div>
 			</div>
 
@@ -536,12 +536,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 		  <script type="text/javascript">
-
+		   
 var map;
     $(document).ready(function(){
      map = new GMaps({
         div: '#map',
-        lat: -7.800330,
+        lat: -7.800330, 
         lng: 110.365970,
         zoom : 6
       });
@@ -549,11 +549,11 @@ var map;
         lat: -3.543333,
         lng: 104.365970,
         title: 'Lima',
-
+       
         infoWindow: {
           content: '<img src="images/ukm2.jpg" height="150" style="width: 300px; padding : 0; margin: 0;"/><br><p><a href="single-page.html" style="text-decoration: none; color: #ff8f0a; font-size : 20px;">UKM Desa Sukamiskin</a></p>'
         }
-
+       
       });
       map.addMarker({
         lat: 0.34003,
@@ -567,11 +567,11 @@ var map;
         lat: -5.343333,
         lng: 119.405970,
         title: 'Makassar',
-
+       
         infoWindow: {
           content: '<img src="images/ukm2.jpg" height="150" style="width: 300px; padding : 0; margin: 0;"/><br><p><a href="single-page.html" style="text-decoration: none; color: #ff8f0a; font-size : 20px;">UKM Desa Sukamiskin</a></p>'
         }
-
+       
       });
        map.addMarker({
         lat: -8.54003,
@@ -585,11 +585,11 @@ var map;
         lat: -2.493333,
         lng: 140.715970,
         title: 'Jayapura',
-
+       
         infoWindow: {
           content: '<img src="images/ukm2.jpg" height="150" style="width: 300px; padding : 0; margin: 0;"/><br><p><a href="single-page.html" style="text-decoration: none; color: #ff8f0a; font-size : 20px;">UKM Desa Sukamiskin</a></p>'
         }
-
+       
       });
        map.addMarker({
         lat: -8.34003,
@@ -603,11 +603,11 @@ var map;
         lat: -3.43333,
         lng: 130.45970,
         title: 'Maluku',
-
+       
         infoWindow: {
           content: '<img src="images/ukm2.jpg" height="150" style="width: 300px; padding : 0; margin: 0;"/><br><p><a href="single-page.html" style="text-decoration: none; color: #ff8f0a; font-size : 20px;">UKM Desa Sukamiskin</a></p>'
         }
-
+       
       });
       map.addMarker({
         lat: -7.8003,
@@ -621,11 +621,11 @@ var map;
         lat: -7.043333,
         lng: 108.365970,
         title: 'Lima',
-
+       
         infoWindow: {
           content: '<img src="images/ukm2.jpg" height="150" style="width: 300px; padding : 0; margin: 0;"/><br><p><a href="single-page.html" style="text-decoration: none; color: #ff8f0a; font-size : 20px;">UKM Desa Sukamiskin</a></p>'
         }
-
+       
       });
       map.addMarker({
         lat: -7.042,
@@ -639,11 +639,11 @@ var map;
         lat: -7.13333,
         lng: 108.465970,
         title: 'Lima',
-
+       
         infoWindow: {
           content: '<img src="images/ukm3.jpg" height="150" style="width: 300px; padding : 0; margin: 0;"/><br><p><a href="single-page.html" style="text-decoration: none; color: #ff8f0a; font-size : 20px;">UKM Desa Sukamaju</a></p>'
         }
-
+       
       });
       map.addMarker({
         lat: -7.042,
@@ -676,8 +676,8 @@ $(document).ready(function() {
 		            itemWidth:280 // Optional, the width of a grid item
 		          };
 
-		      // gmaps
-
+		      // gmaps 
+		     
 		      /**
 		       * Reinitializes the wookmark handler after all images have loaded
 		       */
@@ -687,7 +687,7 @@ $(document).ready(function() {
 		          if ($handler.wookmarkInstance) {
 		            $handler.wookmarkInstance.clear();
 		          }
-
+		
 		          // Create a new layout handler.
 		          $handler = $('li', $tiles);
 		          $handler.wookmark(options);
@@ -698,18 +698,18 @@ $(document).ready(function() {
 		       */
 		      function onScroll() {
 		        // Check if we're within 100 pixels of the bottom edge of the broser window.
-
+		        
 		        if (closeToBottom) {
 		          // Get the first then items from the grid, clone them, and add them to the bottom of the grid
 		          var $items = $('li', $tiles),
 		              $firstTen = $items.slice(0, 2);
 		          $tiles.append($firstTen.clone());
-
+		
 		          applyLayout();
 		        }
 		      };
 
-		      for (i = 1; i < 13; i++) {
+		      for (i = 1; i < 13; i++) { 
     			$('#list-ukm-[i]').hover(function(){
     				$(this).css('background-color','#000');
         			$('.btn-tiles').css("display","table");
@@ -718,18 +718,18 @@ $(document).ready(function() {
                      },function(){
 $('.btn-tiles').css("display","none");
     });
-
+               
 
 			}
 
+		      
 
 
-
-
-
+   
+		
 		      // Call the layout function for the first time
 		      applyLayout();
-
+		
 		      // Capture scroll event.
 		      $window.bind('scroll.wookmark', onScroll);
 
@@ -738,7 +738,7 @@ $('.btn-tiles').css("display","none");
 		  </script>
 		<!---/wookmark-scripts---->
 		<!--start-footer--->
-
+		
 		<!----//End-footer--->
 		<!---//End-wrap---->
 	</body>
