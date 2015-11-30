@@ -58,6 +58,10 @@ Route::get('/jelajah', function() {
     return redirect('/views/temp/jelajah.html');
 });
 
+Route::get('/diskusi', function() {
+    return view('discuss');
+});
+
 Route::get('/cari', function() {
     return redirect()->route('ukm.search', ['ukm']);
 });
